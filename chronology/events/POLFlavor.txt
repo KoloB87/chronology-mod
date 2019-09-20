@@ -225,7 +225,7 @@ country_event = {
 }
 country_event = {
 
-	id = 95103
+	id = 95106
 
 	trigger = {
 		tag = PLC
@@ -240,12 +240,12 @@ country_event = {
 		days = 1
 	}
 	
-	title = "EVTNAME95103"
-	desc = "EVTDESC95103"
+	title = "EVTNAME95106"
+	desc = "EVTDESC95106"
 	picture = "Unite"
 
 	option = {
-		name = "EVTOPTA95103"
+		name = "EVTOPTA95106"
 		inherit = POL
 		inherit = LIT
 		inherit = KRA
