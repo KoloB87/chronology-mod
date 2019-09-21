@@ -1,0 +1,324 @@
+country_event = {
+    id = 990013
+    title = "EVTNAME990013"
+    desc = "EVTDESC990013"
+    picture = "Celebration"
+	major = yes
+		trigger = {
+		tag = RUS 
+		year = 1820
+		not = { RUS = { war_with = ENG } }
+		not = { year = 1836 }
+                not = { has_global_flag = oregon_crizis_RUS }
+                13 = { owned_by = RUS }
+			}
+ 
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 1
+}
+
+option = {
+        name = "EVTOPTA990013"
+		ai_chance = {
+			factor = 90
+		}
+               14 = { secede_province = ENG }
+               13 = { secede_province = ENG }
+               20 = { secede_province = ENG }
+               21 = { secede_province = ENG }
+               19 = { secede_province = ENG }
+               16 = { secede_province = ENG }
+               15 = { secede_province = ENG }
+               17 = { secede_province = ENG }
+               2629 = { secede_province = ENG }
+               18 = { secede_province = ENG } 
+set_global_flag = oregon_crizis_RUS
+}
+option = {
+        name = "EVTOPTB990013"
+		ai_chance = {
+			factor = 10
+		}
+ENG = { war = {
+	target = RUS
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 4
+	}
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 21
+	}
+	attacker_goal = {
+		casus_belli = humiliate
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 28
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 35
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 41
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 43
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 49
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 57
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 58
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 59
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 76
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 69
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 72
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 75
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 250
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 250
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 75
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 72
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 69
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 76
+	}
+
+}
+set_global_flag = oregon_crizis_RUS
+} }
+}
+
+country_event = {
+    id = 990014
+    title = "EVTNAME990014"
+    desc = "EVTDESC990014"
+    picture = "Celebration"
+		trigger = {
+		tag = RUS
+		year = 1820
+		not = { year = 1836 }
+		not = { has_global_flag = oregon_crizis_RUS }
+		RUS = { war_with = ENG }
+			}
+ 
+	fire_only_once = yes
+ 
+
+
+option = {
+        name = "EVTOPTA990014"
+set_global_flag = oregon_crizis_RUS
+}
+}
+
+country_event = {
+    id = 990015
+    title = "EVTNAME990015"
+    desc = "EVTDESC990015"
+    picture = "Celebration"
+	major = yes
+		trigger = {
+		tag = RUS
+		year = 1820
+		not = { RUS = { war_with = ENG } }
+		not = { year = 1836 }
+                not = { has_global_flag = oregon_crizis_USA }
+                13 = { owned_by = RUS }
+			}
+ 
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+option = {
+        name = "EVTOPTA990015"
+		ai_chance = {
+			factor = 90
+		}
+               14 = { secede_province = ENG }
+               13 = { secede_province = ENG }
+               20 = { secede_province = ENG }
+               21 = { secede_province = ENG }
+               19 = { secede_province = ENG }
+               16 = { secede_province = ENG }
+               15 = { secede_province = ENG }
+               17 = { secede_province = ENG }
+               2629 = { secede_province = ENG }
+               18 = { secede_province = ENG } 
+set_global_flag = oregon_crizis
+}
+option = {
+        name = "EVTOPTB990015"
+		ai_chance = {
+			factor = 10
+		}
+ENG = { war = {
+	target = RUS
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 4
+	}
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 21
+	}
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 248
+	}
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 243
+	}
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 241
+	}
+	attacker_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 247
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 28
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 35
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 41
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 43
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 49
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 57
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 58
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 59
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 76
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 69
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 72
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 75
+	}
+	defender_goal = {
+		casus_belli = place_in_the_sun
+                state_province_id = 250
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 250
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 75
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 72
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 69
+	}
+	defender_goal = {
+		casus_belli = acquire_state
+                state_province_id = 76
+	}
+
+}
+set_global_flag = oregon_crizis_USA
+} }
+}
+
+country_event = {
+    id = 990016
+    title = "EVTNAME990016"
+    desc = "EVTDESC990016"
+    picture = "Celebration"
+		trigger = {
+		tag = RUS
+		year = 1820
+		not = { year = 1836 }
+		not = { has_global_flag = oregon_crizis_USA }
+		RUS = { war_with = ENG }
+			}
+	fire_only_once = yes
+ 
+option = {
+        name = "EVTDESC990016"
+set_global_flag = oregon_crizis_USA
+}
+}
+

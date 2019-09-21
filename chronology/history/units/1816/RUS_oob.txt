@@ -43,6 +43,12 @@ PER = {
 	influence_value = 45
 }
 
+MEX = {
+	value = 75		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 25
+}
+
 leader = {
 	name = "Иван Паскевич"
 	type = land
@@ -106,6 +112,41 @@ leader = {
 	personality = brash
 	background = aristocrat
 	picture="personal_admiral_menshikov"
+}
+leader = {
+	name = "Уинфилд Скотт Хэнкок"
+	picture = usa_gen_scott
+	date = 1814.1.1
+	type = land
+	personality = au_fait
+	background = school_of_firepower
+}
+
+leader = {
+	name = "Александр Макомб"
+	picture = usa_gen_macomb
+	date = 1812.1.1
+	type = land
+	personality = heroic
+	background = engineer
+}
+
+leader = {
+	name = "Карл Стюарт"
+	picture = usa_adm_stewart
+	date = 1816.1.1
+	type = sea
+	personality = able
+	background = school_of_offense
+}
+
+leader = {
+	name = "Даниил Паттерсон"
+	picture = usa_adm_patterson
+	date = 1812.1.1
+	type = sea
+	personality = efficient
+	background = school_of_defense
 }
 
 army = {
@@ -749,4 +790,3 @@ navy = {
 	}
 
 }
-

@@ -1,0 +1,772 @@
+political_decisions = {
+	triple_head_eagle = {
+		potential = {
+			tag = RUS
+			exists = USA
+			NOT = { has_country_modifier = triple_head_eagle_rises }
+		}
+
+		allow = {
+			war = no
+			USA = { war = no }	
+		}
+
+		effect = {
+			USA = {
+				any_owned = {
+					add_core = RUS
+				}
+				all_core = {
+					add_core = RUS
+				}
+			}
+			inherit = USA
+			add_country_modifier = {
+				name = triple_head_eagle_rises
+				duration = -1
+			}
+			money = 100000000
+			RUS = {
+				country_event = { id=16750 days = 0 }
+				}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	apply_for_RUSA_statehood = {
+		potential = {	
+			RUS = {
+				has_country_modifier = triple_head_eagle_rises
+				}
+			exists = RUS
+			NOT = { 
+				exists = USA
+			}
+			OR = {
+				tag = TEX
+				tag = DES
+				tag = CAL
+			}
+		}
+		allow = {
+			war = no
+			RUS = {
+				war = no
+			}
+			NOT = {
+				has_country_flag = usstatehood_we_have_applied
+			}
+			relation = {
+				who = RUS
+				value = 175
+			}
+		}
+		effect = {
+		set_country_flag = usstatehood_we_have_applied
+			RUS = {
+				country_event = { id=16660 days=0 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	king_cotton_rus = {
+		potential = {
+			tag = CSA
+			war_with = RUS
+			not = {
+				has_country_flag = haskingcotton
+			}
+		}
+		
+		allow = {
+			cotton = 500
+		}
+		
+		effect = {
+			set_country_flag = haskingcotton
+			prestige = 5
+			cotton = -500
+			any_greater_power = {
+				limit = {
+					NOT = {
+						tag = RUS
+					}
+				}
+				casus_belli = {
+					target = RUS
+					type = cut_down_to_size
+					months = 24
+				}
+			}
+		}
+	}
+
+	trail_of_happy_tears = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_global_flag = marching_on_the_trail_of_tears
+			}
+		}
+		
+		allow = {
+			owns = 129
+			owns = 130
+			owns = 131
+			average_consciousness = 3
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					has_pop_culture = cherokee
+					NOT = {
+						location = {
+							OR = {
+								province_id = 130
+								province_id = 131
+								province_id = 129
+							}
+						}
+					}
+				}
+				reduce_pop = 0.80
+				consciousness = 2
+				militancy = -1
+			}
+			130 = {
+				add_core = CHE
+			}
+			131 = {
+				add_core = CHE
+			}
+			129 = {
+				add_core = CHE
+			}
+			144 = {
+				add_core = CHE
+			}
+			any_pop = {
+				limit = {
+					has_pop_culture = cherokee
+					location = {
+						OR = {
+							province_id = 130
+							province_id = 131
+							province_id = 129
+						}
+					}
+				}
+				reduce_pop = 1.20
+				consciousness = 4
+				militancy = 1
+			}
+			add_accepted_culture = cherokee
+			set_global_flag = marching_on_the_trail_of_tears
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	custers_expedition_rus = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = custers_expedition_sent
+			}
+			owns = 122
+		}
+		
+		allow = {
+			122 = {
+				units_in_province = 1
+			}
+		}
+		
+		effect = {
+			prestige = 1
+			set_country_flag = custers_expedition_sent
+		}
+	}
+	enact_the_homestead_act_rus = {
+		potential = {
+			tag = RUS
+			OR = {
+				government = democracy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			NOT = {
+				has_country_modifier = the_homestead_act
+			}
+			year = 1862
+		}
+		
+		allow = {
+			prestige = 40
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = the_homestead_act
+				duration = -1
+			}
+		}
+	}
+	
+	emancipation_proclamation_rus = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = emancipation
+			}
+			OR = {
+				war_with = CSA
+				AND = {
+					NOT = {
+						exists = CSA
+					}
+					has_global_flag = american_civil_war_has_happened
+				}
+			}
+		}
+		allow = {
+			OR = {
+				CSA = {
+					national_provinces_occupied = 0.80
+				}
+				NOT = {
+					exists = CSA
+				}
+			}
+			prestige = 35
+		}
+		effect = {
+			set_country_flag = emancipation
+			prestige = 5
+			add_accepted_culture = yankee
+			add_accepted_culture = afro_american
+			political_reform = no_slavery
+			any_pop = {
+				limit = {
+					has_pop_culture = yankee
+				}
+				consciousness = -5
+				militancy = -5
+			}
+			any_greater_power = {
+				relation = {
+					who = RUS
+					value = 30
+				}
+			}
+		}
+	}	
+
+	manifest_destiny_rus = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_country_flag = hasmanifestdestiny
+			}
+		}
+		allow = {
+			romanticism = 1
+			prestige = 50
+			NOT = {
+				exists = TEX
+				133 = {
+					owned_by = MEX # Austin
+					}
+			}
+		}
+		effect = {
+			set_country_flag = hasmanifestdestiny
+			diplomatic_influence = {
+				who = MEX
+				value = -500
+			}
+			relation = {
+				who = MEX
+				value = -250
+			}
+			any_pop = {
+				consciousness = 2
+			}
+			TEX_132 = {
+				add_core = RUS
+			}
+			MEX_103 = {
+				add_core = RUS
+			}
+			USA_129 = {
+				add_core = RUS
+			}
+			USA_106 = {
+				add_core = RUS
+			}
+			USA_81 = {
+				add_core = RUS
+			}
+			MEX_94 = {
+				add_core = RUS
+			}
+			MEX_85 = {
+				add_core = RUS
+			}
+			MEX_100 = {
+				add_core = RUS
+			}
+			USA_200 = {
+				add_core = RUS
+			}
+	
+		}
+	}
+	gag_rule_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 1
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = house_gag_rule_enacted
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 3
+			has_country_modifier = the_slavery_debate
+		}
+		
+		effect = {
+			any_pop = {
+				consciousness = -1
+			}
+			set_country_flag = house_gag_rule_enacted
+		}
+	}
+
+	clay_and_douglas_draft_rus = {
+		
+		potential = {
+			tag = RUS
+			average_consciousness = 3
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = clay_and_douglas_draft_enacted
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 4
+			has_country_modifier = the_slavery_debate
+		}
+		
+		effect = {
+			any_pop = {
+				consciousness = -2
+			}
+			set_country_flag = clay_and_douglas_draft_enacted
+		}
+	}
+	
+	corwin_amendment_rus = {
+		
+		potential = {
+			tag = RUS
+			average_consciousness = 4
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = corwin_amendment_enacted
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 7
+			has_country_modifier = the_slavery_debate
+		}
+		
+		effect = {
+			any_pop = {
+				consciousness = -2
+			}
+			set_country_flag = corwin_amendment_enacted
+		}
+	}
+	
+	fugitive_slave_act_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 4
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = fugitive_slave_act_enacted
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 5
+			has_country_modifier = the_slavery_debate
+		}
+		
+		effect = {
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = {
+					consciousness = -2
+				}
+			}
+			set_country_flag = fugitive_slave_act_enacted
+		}
+	}
+	
+	nashville_convention_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 5
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = nashville_convention_held
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 6
+		}
+		
+		effect = {
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = {
+					consciousness = -3
+				}
+			}
+			set_country_flag = nashville_convention_held
+		}
+	}
+	
+	ostend_manifesto_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 1
+			slavery = yes_slavery
+			SPA_2209 = {
+				is_slave = yes
+			}
+			NOT = {
+				has_country_flag = ostend_manifesto_published
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 3
+		}
+		
+		effect = {
+			badboy = 6
+			any_greater_power = {
+				relation = {
+					who = RUS
+					value = -150
+				}
+			}
+			SPA_2209 = {
+				add_core = RUS
+			}
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = {
+					consciousness = -1
+				}
+			}
+			set_country_flag = ostend_manifesto_published
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				prestige = 25
+			}
+		}
+	}
+	
+	kansas_nebraska_act_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 1
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = kansas_nebraska_act_acting
+				has_global_flag = american_civil_war_has_happened
+			}
+			has_country_flag = missouri_compromise_acting
+		}
+		
+		allow = {
+			average_consciousness = 3
+		}
+		
+		effect = {
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = { consciousness = -2 }
+			}
+			any_state = {
+				limit = {
+					is_slave = no
+				}
+				any_pop = { consciousness = 1 }
+			}
+			set_country_flag = kansas_nebraska_act_acting
+		}
+	}
+	
+	wilmot_proviso_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 1
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = wilmot_proviso_providing
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 4
+			owns = 103
+			owns = 104
+			owns = 105
+			owns = 108
+			owns = 107
+			owns = 84
+			owns = 87
+			owns  = 89
+		}
+		
+		effect = {
+			any_state = {
+				limit = {
+					is_slave = no
+				}
+				any_pop = {
+					consciousness = -2
+				}
+			}
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = {
+					consciousness = 1
+				}
+			}
+			set_country_flag = wilmot_proviso_providing
+		}
+	}
+
+	raise_the_bonnie_blue_flag_rus = {
+		potential = {
+			tag = CSA
+			NOT = {
+				has_country_flag = bonnie_blue_flag
+			}
+		}
+		
+		allow = {
+			war_with = RUS
+		}
+		
+		effect = {
+
+			define_general = {
+				name = "Robert E.Lee"
+				personality = audacious
+				background = war_college
+			}
+
+			define_general = {
+				name = "Thomas Jackson"
+				personality = coolminded
+				background = school_of_defense
+			}
+			
+			add_country_modifier = {
+				name = the_bonnie_blue_flag
+				duration = 365
+			}
+			
+			set_country_flag = bonnie_blue_flag
+		}
+	}
+
+	enact_radical_reconstruction_rus = {
+		potential = {
+			tag = RUS
+			war = no
+			has_global_flag = american_civil_war_has_happened
+			owns = 211
+			owns = 195
+			owns = 139
+			NOT = {
+				exists = CSA
+				has_country_flag = has_used_radical_reconstruction
+			}
+		}
+		
+		allow = {
+			NOT = {
+				average_militancy = 4
+			}
+		}
+		effect = {
+			war_exhaustion = -3
+			any_pop = {
+				limit = {
+					has_pop_culture = dixie
+				}
+				consciousness = -5
+				militancy = -5
+			}
+			set_country_flag = has_used_radical_reconstruction
+			add_accepted_culture = dixie
+			add_accepted_culture = texan
+		}
+	}
+	virgin_purchase_rus = {
+		potential = {
+			tag = RUS
+			war = no
+			2223 = {
+				owned_by = DEN
+			}
+			has_global_flag = american_civil_war_has_happened
+			NOT = {
+				has_country_flag = virgin_purchase_ok
+			}
+		}
+		allow = {
+			mass_politics = 1
+			relation = { who = DEN value = 100 }
+			money = 25000
+		}
+		effect = {
+			prestige = 5
+			DEN = {
+				country_event = 36221 #95103
+			}
+			set_country_flag = virgin_purchase_ok
+		}
+	}
+	adams-onis_treaty_rus = {
+		potential = {
+			tag = RUS
+			war = no
+			USA_200 = {
+				owned_by = SPA
+			}
+			NOT = {
+				has_country_flag = florida_purchase_ok
+			}
+		}
+		allow = {
+			NOT = {
+				MEX = {
+					war_with = SPA
+				}
+			}
+			relation = { who = SPA value = 0 }
+			money = 25000
+		}
+		effect = {
+			prestige = 5
+			SPA = {
+				country_event = 16730
+			}
+			set_country_flag = florida_purchase_ok
+		}
+	}
+	create_liberia_rus = {
+		potential = {
+			tag = RUS
+			owns = 1887
+			NOT = {
+				has_country_flag = liberia_is_created
+			}
+		}
+		allow = {
+			war = no
+			NOT = {
+				exists = LIB
+			}
+			invention = positive_liberty
+		}
+		effect = {
+			prestige = 5
+			release_vassal = LIB
+			#any_owned = {
+			#	limit = {
+			#		is_core = LIB
+			#	}
+			#	remove_core = THIS
+			#	colonial = no
+			#	secede_province = LIB
+			#}
+			#diplomatic_influence = { who = LIB value = 200 }
+			set_country_flag = liberia_is_created
+		}
+	}
+	missouri_compromise_rus = {
+		potential = {
+			tag = RUS
+			average_consciousness = 1
+			slavery = yes_slavery
+			NOT = {
+				has_country_flag = kansas_nebraska_act_acting
+				has_country_flag = missouri_compromise_acting
+				has_global_flag = american_civil_war_has_happened
+			}
+		}
+		
+		allow = {
+			average_consciousness = 2
+		}
+		
+		effect = {
+			any_state = {
+				limit = {
+					is_slave = no
+				}
+				any_pop = { consciousness = -2  militancy = -3 }
+			}
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = { consciousness = 1 militancy = 1 }
+			}
+			set_country_flag = missouri_compromise_acting
+		}
+	}
+}	

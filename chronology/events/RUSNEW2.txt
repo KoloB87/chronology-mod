@@ -1,0 +1,288 @@
+country_event = {
+
+	id = 16710 
+
+	trigger = {
+		tag = ENG 
+		year = 1820
+		exists = RUS
+		NOT = {
+			year = 1855
+			war_with = RUS
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1851
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1853
+		}
+	}
+
+	title = "EVTNAME36913"
+	desc = "EVTDESC36913"
+	picture = "americascup"
+
+	option = {
+		name = "EVTOPTA36913" 
+		prestige = 5
+	}
+}
+#Mainot
+country_event = {
+
+	id = 16720
+
+	trigger = {
+		tag = RUS
+		NOT = { owns = 118 }
+		money = 1000
+	}
+
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 20
+	}
+
+	title = "EVTNAME95286"
+	desc = "EVTDESC95286"
+	picture = "usa_canada"
+
+	option = {
+		name = "EVTOPTA95286"
+		random_country = {
+			limit = {
+				owns = 118
+			}
+			country_event = 95287
+		}
+	}
+	option = {
+		name = "EVTOPTB95286"
+		prestige = -1
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	
+	id = 16725
+	title = "EVTNAME44825" #The Treaty of Guadalupe Hidalgo
+	desc = "EVTDESC44825"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA44825"
+		prestige = -25
+		treasury = 100000
+		end_war = RUS
+		any_owned = {
+			limit = { is_core = RUS }
+			secede_province = RUS
+		}
+		RUS = { country_event = 44826 }
+		ai_chance = {
+			factor = 90
+		}
+	}
+
+	option = {
+		name = "EVTOPTB44825"
+		war_exhaustion = 20
+		RUS = { country_event = 44827 }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+
+	id = 16727
+	title = "EVTNAME44842" #The Texas Republic
+	desc = "EVTDESC44842"
+	picture = "yukatan"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		is_vassal = no
+		NOT = {
+			exists = TEX
+			exists = USA
+			government = democracy
+			government = hms_government
+		}
+		any_owned_province = { is_core = TEX }
+		year = 1830
+		NOT = {
+			year = 1855
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	immediate = {
+		any_owned = {
+			limit = { is_core = TEX }
+			secede_province = TEX
+		}
+		TEX = {
+			any_pop = { militancy = -6 }
+		}
+		RUS = {
+			diplomatic_influence = { who = TEX value = 200 }
+			diplomatic_influence = { who = THIS value = -200 }
+		}
+		set_global_flag = texas_war_independence
+	}
+
+	option = {
+		name = "EVTOPTA44842"
+		war = {
+			target = TEX
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.25
+				war = yes
+			}
+			modifier = {
+				factor = 0.5
+				num_of_revolts = 1
+			}
+		}	
+	}
+
+	option = {
+		name = "EVTOPTB44842"
+		prestige = -5
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 2
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 1.5
+				war = yes
+			}
+		}
+	}
+}
+#Florida Purchase
+country_event = {
+
+	id = 16730
+
+	is_triggered_only = yes
+
+	title = "EVTNAME99300"
+	desc = "EVTDESC99300"
+	picture = "florida"
+
+	option = {
+		name = "EVTOPTA99300"
+		relation = { who = FROM value = 100 }
+		USA_200 = {
+			secede_province = RUS
+			add_core = RUS
+			remove_core = SPA
+		}
+		RUS = {
+			money = -25000
+		}
+		money = 25000
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "EVTOPTB99300"
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+}
+
+country_event = {
+
+	id = 36221
+	news = yes
+	title = "EVTNAME95103"
+	desc = "EVTDESC95103"
+	picture = "virginisles"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA95103"
+		money = 25000
+		RUS = {
+			country_event = { id=36222 days=0 }
+		}
+		2223 = {
+			add_core = RUS		
+			secede_province = RUS
+			remove_core = DEN
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 36222
+	title = "EVTNAME95104"
+	desc = "EVTDESC95104"
+	picture = "virginisles"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA32510"
+		money = -25000
+		2223 = {
+			assimilate = yes
+		}
+	}
+}
+
+country_event = {
+	id = 36224
+	title = "EVTNAME95105"
+	desc = "EVTDESC95105"
+	picture = "virginisles"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA95105"
+		relation = {
+			who = FROM
+			value = -100
+		}
+		prestige = -5
+	}
+}
