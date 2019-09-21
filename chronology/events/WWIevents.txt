@@ -782,7 +782,7 @@ country_event = {
 		badboy = 6
 		set_global_flag = treaty_of_brest_1
 		ai_chance = {
-			factor = 80
+			factor = 50
 		}
 	}
 
@@ -791,7 +791,7 @@ country_event = {
 		badboy = 3
 		set_global_flag = treaty_of_brest_2
 		ai_chance = {
-			factor = 20
+			factor = 50
 		}
 	}
 

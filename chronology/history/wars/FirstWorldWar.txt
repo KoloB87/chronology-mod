@@ -4,6 +4,8 @@ name = "Первая Мировая Война"
 	add_attacker = GER
 	add_attacker = KUK
 	add_defender = ENG
+	add_defender = SAF
+	add_defender = AST
 	add_defender = FRA
 	add_defender = RUS
 	add_defender = SER
@@ -25,41 +27,119 @@ name = "Первая Мировая Война"
 		actor = KUK
 		receiver = MON
 	}
-	#war_goal = {
-	#	casus_belli = liberate_country
-	#	actor = ENG
-	#	receiver = TUR
-	#	country = IRQ
-	#}
 	war_goal = {
 		casus_belli = acquire_state
+		actor = RUS
+		receiver = KUK
+		state_province_id = 702
+	}
+	war_goal = {
+		casus_belli = acquire_state
+		actor = RUS
+		receiver = KUK
+		state_province_id = 703
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = ENG
+		receiver = GER
+		state_province_id = 1914
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
 		actor = ENG
 		receiver = GER
 		state_province_id = 2034
 	}
 	war_goal = {
-		casus_belli = acquire_state
+		casus_belli = place_in_the_sun
 		actor = ENG
 		receiver = GER
 		state_province_id = 2045
 	}
 	war_goal = {
-		casus_belli = acquire_state
+		casus_belli = place_in_the_sun
 		actor = ENG
 		receiver = GER
 		state_province_id = 2042
 	}
 	war_goal = {
-		casus_belli = acquire_state
+		casus_belli = place_in_the_sun
 		actor = ENG
 		receiver = GER
 		state_province_id = 2083
 	}
 	war_goal = {
-		casus_belli = acquire_state
+		casus_belli = place_in_the_sun
 		actor = ENG
 		receiver = GER
+		state_province_id = 2522
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = ENG
+		receiver = GER
+		state_province_id = 2523
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = ENG
+		receiver = GER
+		state_province_id = 2543
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = SAF
+		receiver = GER
 		state_province_id = 2078
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = SAF
+		receiver = GER
+		state_province_id = 2084
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = AST
+		receiver = GER
+		state_province_id = 2530
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = FRA
+		receiver = GER
+		state_province_id = 1819
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = FRA
+		receiver = GER
+		state_province_id = 1956
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = FRA
+		receiver = GER
+		state_province_id = 1960
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = FRA
+		receiver = GER
+		state_province_id = 1966
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = FRA
+		receiver = GER
+		state_province_id = 1972
+	}
+	war_goal = {
+		casus_belli = place_in_the_sun
+		actor = FRA
+		receiver = GER
+		state_province_id = 3269
 	}
 	war_goal = {
 		casus_belli = acquire_core_state
@@ -78,4 +158,7 @@ name = "Первая Мировая Война"
 	rem_defender = SER
 	rem_defender = MON
 	rem_defender = RUS
+	rem_defender = BEL
+	rem_defender = SAF
+	rem_defender = AST
 }
