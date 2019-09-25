@@ -462,3 +462,18 @@ CLR		= "countries/Russian Columbia.txt"
 
 HSM		= "countries/Hashemite Arabia.txt"
 TGA		= "countries/Tonga.txt"
+
+TEV             = "countries/Tevtonia.txt"
+LUZ		= "countries/Luzatia.txt"
+
+AKA		= "countries/Acadia.txt"
+ARK		= "countries/Arcadia.txt"
+GLT		= "countries/Grand Lithuania.txt"
+KUR		= "countries/Kurdistan.txt"
+MAC		= "countries/Macedonia.txt"
+SPQ		= "countries/SPQR.txt"
+PON		= "countries/Pont.txt"
+BSQ		= "countries/Basque.txt"
+WST		= "countries/Westphalia.txt"
+INK		= "countries/Inkeri.txt"
+GAL		= "countries/Galisia.txt"
