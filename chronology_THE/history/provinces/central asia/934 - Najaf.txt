@@ -4,8 +4,8 @@ add_core = TUR
 add_core = IRQ
 trade_goods = fruit
 life_rating = 35
+colonial = 2
 terrain = desert
-
 1923.1.1 = {
 	owner = ENG
 	controller = ENG

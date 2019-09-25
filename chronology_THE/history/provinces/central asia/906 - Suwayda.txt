@@ -4,6 +4,7 @@ add_core = TUR
 add_core = SYR
 trade_goods = grain
 life_rating = 35
+colonial = 2
 terrain = semi_desert_hills
 1836.1.1 = {
 	owner = EGY

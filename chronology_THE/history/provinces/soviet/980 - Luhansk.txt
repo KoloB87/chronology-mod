@@ -1,7 +1,6 @@
 owner = RUS
 controller = RUS
 add_core = RUS
-add_core = UKR
 trade_goods = cattle
 life_rating = 35
 terrain = dry_grassland
@@ -19,6 +18,7 @@ terrain = dry_grassland
 	}
 }
 1923.1.1 = {
+        add_core = UKR
 	owner = SOV
 	controller = SOV
 	add_core = SOV

@@ -3,6 +3,7 @@ controller = RUS
 add_core = RUS
 trade_goods = fish
 life_rating = 20
+colonial = 2
 terrain = boreal_forest_mountains
 1861.1.1 = {
 	fort = 1

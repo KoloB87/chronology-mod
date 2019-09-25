@@ -1,12 +1,13 @@
 owner = RUS
 controller = RUS
 add_core = RUS
-add_core = UKR
 terrain = city_968
 trade_goods = fish
 life_rating = 35
+naval_base = 1
 1914.1.1 = { railroad = 3 naval_base = 4 }
 1923.1.1 = {
+        add_core = UKR
 	owner = SOV
 	controller = SOV
 	add_core = SOV

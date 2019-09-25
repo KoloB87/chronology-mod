@@ -4,6 +4,7 @@ add_core = TUR
 add_core = KWT
 trade_goods = fruit
 life_rating = 35
+colonial = 2
 terrain = desert
 1914.1.1 = {
 	owner = ENG

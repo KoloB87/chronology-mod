@@ -4,6 +4,7 @@ controller = MEX
 add_core = SPA
 trade_goods = fish
 life_rating = 35
+colonial = 2
 terrain = hilly_farmland
 1836.1.1 = {
 	remove_core = SPA

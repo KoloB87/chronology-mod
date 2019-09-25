@@ -4,6 +4,7 @@ add_core = TUR
 add_core = PLS
 trade_goods = fruit
 life_rating = 35
+colonial = 2
 terrain = marginal_farmland
 1836.1.1 = {
 	owner = EGY

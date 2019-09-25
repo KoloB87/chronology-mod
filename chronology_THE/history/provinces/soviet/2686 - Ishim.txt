@@ -3,6 +3,7 @@ controller = RUS
 add_core = RUS
 trade_goods = sulphur
 life_rating = 35
+colonial = 2
 terrain = boreal_forest
 1914.1.1 = { railroad = 3 }
 1923.1.1 = {

@@ -1,7 +1,6 @@
 owner = RUS
 controller = RUS
 add_core = RUS
-add_core = UKR
 add_core = PLC
 trade_goods = coal
 life_rating = 35
@@ -11,6 +10,7 @@ terrain = good_farmland
 }
 1914.1.1 = { railroad = 2 }
 1923.1.1 = {
+        add_core = UKR
 	owner = SOV
 	controller = SOV
 	add_core = SOV

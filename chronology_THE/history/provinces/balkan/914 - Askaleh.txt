@@ -4,6 +4,7 @@ add_core = TUR
 add_core = LBN
 trade_goods = iron
 life_rating = 35
+colonial = 2
 terrain = dry_forest_mountains
 1836.1.1 = {
 	owner = EGY

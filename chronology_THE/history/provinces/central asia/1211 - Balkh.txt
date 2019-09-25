@@ -8,4 +8,5 @@ terrain = semi_desert_hills
 1861.1.1 = {
 	owner = AFG
 	controller = AFG
+	remove_core = BUK
 }

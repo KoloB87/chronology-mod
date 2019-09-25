@@ -1,0 +1,54 @@
+capital = 492
+primary_culture = basque
+religion = catholic
+government = democracy
+plurality = 0.1
+nationalvalue = nv_equality
+literacy = 0.18
+civilized = yes
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = none_voting
+public_meetings = yes_meeting
+press_rights = censored_press
+trade_unions = no_trade_unions
+voting_system = jefferson_method
+political_parties = underground_parties
+immigration_policy = open_immigration
+conscription = mandatory_service
+minorities = oppression
+
+# Social Reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+pollution = no_controls
+child_labor = child_labor_legal
+education = elite
+arts_endowment = no_endowment
+
+ruling_party = BSQ_liberal
+upper_house = {
+	fascist = 4
+	liberal = 38
+	conservative = 21
+	reactionary = 11
+	anarcho_liberal = 8
+	socialist = 11
+	communist = 6
+}
+
+1861.1.1 = {
+	oob = "/1861/BSQ_oob.txt"
+}
+
+1861.1.1 = {
+# Technologies
+
+#Inventions
+}

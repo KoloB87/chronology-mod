@@ -1,8 +1,10 @@
 owner = RUS
 controller = RUS
 add_core = RUS
+add_core = INK
 trade_goods = timber
 life_rating = 35
+colonial = 2
 terrain = tundra
 1914.1.1 = {
 	naval_base = 4
